@@ -1,0 +1,43 @@
+/* Estilo_1*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo_2*/
+header{
+    padding: 16px 0;
+    background-color: #182c61;
+    color: #fff;
+}
+
+/* Estilo_3*/
+header nav li{
+    display: inline;
+    margin-left: 16px;
+    font-size: 24px;
+}
+
+/* Estilo_4*/
+header nav li a{
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Estilo_5*/
+.container {
+    max-width: 1024px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+/* Estilo_6*/
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
