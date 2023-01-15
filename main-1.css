@@ -1,43 +1,179 @@
-/* Estilo_1*/
+/* Estilo_1 - Reset: Faz com que o navegador respeite as configuracoes desejadas*/
 *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+    margin: 0; /* Espacamento externo (OBS! nao interfere nos elementos internos) */
+    padding: 0; /* Espacamento interno do box model (OBS! Interfere no tamanho dos elementos internos)*/
+    box-sizing: border-box; /* Respeitas as confiruracoes desejadas */
 }
 
-/* Estilo_2*/
+/* Estilo_2 - Fonte de todas as letras da tag <header> e da tag <h2> */
+header,
+section h2,
+section h3,
+form button{
+    font-family: 'Bungee', cursive; /* Estilo da fonte importada do google fonts*/
+    font-weight: normal;
+}
+
+/* Estilo_3 - Fonte do corpo da pagina*/
+body, input, textarea{
+    font-family: 'Roboto', sans-serif; /* Estilo da fonte importada do google fonts*/
+}
+
+/* Estilo_4 - Dimencoes e cor do cabecalho*/
 header{
-    padding: 16px 0;
-    background-color: #182c61;
-    color: #fff;
+    padding: 16px 0; /* Dimencoes internas do cabecalho(Espaco entre as letras e a margem)*/
+    background-color: #182c61; /* Cor de fundo */
+    color: #fff; /* Cor da fonte */
 }
 
-/* Estilo_3*/
+/* Estilo_5 - Tamanho da fonte do cabecalho
+header h1{
+    font-size: 30px;  Altera o tamanho da fonte
+}*/
+
+
+/* Estilo_6 - Exibicao, tamanho, posicao e margem dos menus <nav>*/
 header nav li{
-    display: inline;
-    margin-left: 16px;
-    font-size: 24px;
+    display: inline; /* Exibicao na mesma linha */
+    margin-left: 16px; /* Margem entre os menus */
+    font-size: 18px; /* Tamanho da fonte */
 }
 
-/* Estilo_4*/
+/* Estilo_7 - Cor da letra dos menus(<li>/<a>) e exclusao do anderline*/
 header nav li a{
-    color: #fff;
-    text-decoration: none;
+    color: #fff; /* Cor da letra */
+    text-decoration: none; /* Exclusao do anderline que decorava os menus */
 }
 
-/* Estilo_5*/
+/* Estilo_8 - Tamanho, dimencao e margens da pagina*/
 .container {
-    max-width: 1024px;
-    width: 100%;
-    margin: 0 auto;
+    max-width: 1024px; /* Largura maxima do container*/
+    width: 100%; /* Largura (Ocupa 100% da largura ate chegar na largura maxima escolhida. Se o conteudo passar passar da largura maxima ele fica centralizadona tela)*/
+    margin: 0 auto; /* Margens (Ajuda a centralizar o conteudo) */
 }
 
-/* Estilo_6*/
-header .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+/* Estilo_9 - Modo de exibicao e posicao, alinhamento do cabecalho(<header>) e das secoes(<sections>) (imagem e texto) e preenchimento dos espacos*/
+header .container,
+section .container{
+    display: flex; /* Posiciona e exibe o conteudo lado a lado */
+    align-items: center; /* Centraliza e alinha o conteudo na vertical comecando pelo meio */
+    justify-content: space-between; /* Justifica o conteudo entre os espacos */
+}
+
+/* Estilo_10 - Tamanho e distancia das <img>(logos) na tag <li> da <ul class="brands-lis">*/
+.brands-list img {
+    height: 24px; /* Tamanho das imagens */
+    margin-right: 10px;      
+}
+
+/* Estilo_11 - Exibicao e posicao das <img> nas tags <li> da <ul class="brands-lis">*/
+.brands-list li {
+    display: inline; /* Posicionar na mesma linha */     
+}
+
+/* Estilo_12 - Sobreescrevendo a propriedade align-items: center; da propriedade section .container do Estilo_9 */
+section .container{
+    align-items: flex-start; /* Centraliza e alinha o conteudo na vertical comecando pelo inicio ou parte superior */
+}
+
+/* Estilo_13 - Espacamento interno das secoes <section>*/
+section {
+    padding: 24px 0; /* Espacamento interno de 24px para a parte superior e inferior e 0 para as laterais */
+}
+
+/* Estilo_14 - Margem do titulo(<h2>) da secao(<section>) */
+section h2 {
+    margin-bottom: 8px; /* Margem inferior do titulo*/
+    /*font-size: 24px;  - Altera o tamanho da fonte do sub-titulo(<h2>) da pagina*/
+}
+
+/* Estilo_15 - Muda a cor de toda a secao(<section>)  */
+section {
+    color: #182c61; /* Muda a cor*/
+}
+
+/* Estilo_16 - Margem do paragrafo(<p>) da secao(<section>)  */
+section p {
+    margin-bottom: 12px; /* Margem inferior do paragrafo */
+}
+
+/* Estilo_17 - Margem na imagem(<img>) da secao(<section>) */
+.store-front{
+    margin-right: 32px; /* Margem de 32px a direita */
+}
+
+/* Estilo_18 - Tamanho das imagens<img> na <ul class="social-links"> */
+.social-links img{
+    height: 24px; /* Altera o tamanho das imagens*/
+}
+
+/* Estilo_19 - Exibicao dos itens da tag <li> da classe social-links*/
+.social-links li {
+    display: inline; /* Exibir na mesma linha*/
+    margin-right: 8px; /* Margem a direita */
+}
+
+/* Estilo_20 - Retirando underline da tag <a> na lista da classe social-links*/
+.social-links li a {
+    text-decoration: none; /* Decoracao do texto = nenhum */
+}
+
+/* Estilo_21 - Exibicao e posicao da <Section class="contact"> */
+#contact .container {
+    display: block; /* O conteudo e exibido em blocos*/
+}
+
+/* Estilo_22 - Modo de exibicao do conteudo da <div class="contact-methods"> */
+.contact-methods {
+    display: flex; /* O conteudo sera exibido lado a lado*/
+    justify-content: space-between; /*Espacamento entre as secoes*/
+}
+
+/* Estilo_23 - Modo de exibicao, largura, margin inferior e espacamento interno do formulario */
+form input,
+form textarea,
+form button {
+    display: block; /* Exibicao em blocos */
+    width: 320px; /* Largura */
+    margin-bottom: 8px; /* Margin inferior */
+    padding: 8px; /* Espacamento interno */
+}
+
+/* Estilo_24 - Removendo redimencionamento do text area */
+form textarea {
+    resize: none; /* Redimencionamento = nenhum ou vazio */
+    height: 180px; /* Tamanho do text area */
+}
+
+/* Estilo_25 - Margem do das tags <h3> */
+section h3 {
+    margin-bottom: 16px; /* Margem inferior */
+}
+
+/* Estilo_26 - Estilizando o Botao do formulario */
+form button {
+    background-color: #182c61; /* Cor do botao */
+    color: #fff; /* Cor da fonte do botao */
+    border: none; /* Borda = nehuma */
+    cursor: pointer; /* Quando o mao passar em cima do botao ira aparecer uma maozinha */
+}
+
+/* Estilo_27 - Passando o mouse em cima do botao */
+/* OBS!!! A propriedade hover se aplica quando queremos que aconteca uma acao ao passar o mouse em cima de um elemento */
+form button:hover {
+    background-color: #314e9e; /* Altera a cor do botao ao passarmos o mouse em cima  */
 }
 
 
+/* Estilo_28 - Mudando a cor do focus na text-area e nos inputs do formulario */
+/* OBS!!! A propriedade focus se aplica quando um campo esta selecionado */
+input:focus, textarea:focus {
+    outline-color: #182c61; /* Muda a cor da linha de fora do formulario */
+}
 
+/* Estilo_29 - Estilizando o Rodape */
+footer{
+    background-color: #182c61; /* Cor de fundo do rodape */
+    color: #fff; /* Cor da fonte */
+    padding: 16px 0; /* Espacamento interno */
+}
